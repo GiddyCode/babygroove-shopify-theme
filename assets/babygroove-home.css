@@ -251,7 +251,8 @@
   margin-inline:auto;
 }
 .bg-art--newsletter .bg-newsletter-form{
-  width:min(100%,68rem);
+  width:100%;
+  max-width:none;
   margin:2.6rem auto 0;
   justify-self:center;
 }
@@ -259,6 +260,8 @@
   display:grid;
   grid-template-columns:minmax(0,1fr) auto;
   align-items:center;
+  width:min(100%,68rem);
+  margin-inline:auto;
   min-height:6.6rem;
   padding:.55rem;
   border:1px solid rgba(20,63,67,.16);
