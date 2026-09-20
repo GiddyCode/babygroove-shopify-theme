@@ -36,7 +36,7 @@
                     role="list"
                   >
                     {%- for childlink in link.links -%}
-                      <li>
+                      <li class="mega-menu__item{% if childlink.links == blank %} mega-menu__item--single{% else %} mega-menu__item--nested{% endif %}">
                         <a
                           id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                           href="{{ childlink.url }}"

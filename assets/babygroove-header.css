@@ -317,20 +317,35 @@ shopify-account.header__icon:hover {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: var(--bg-space-8);
+  max-width: var(--bg-content-standard);
 }
 
 .mega-menu__content--with-promo .mega-menu__inner {
-  grid-template-columns: minmax(0, 1fr) minmax(20rem, 26rem);
+  grid-template-columns: minmax(0, 1fr) minmax(22rem, 28rem);
 }
 
-.mega-menu__list {
+.mega-menu .mega-menu__list,
+.header--top-center .mega-menu .mega-menu__list {
   display: grid;
-  grid-template-columns: repeat(4, minmax(10rem, 1fr));
-  gap: var(--bg-space-8) var(--bg-space-10);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+  gap: var(--bg-space-6);
   min-width: 0;
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.header--top-center .mega-menu .mega-menu__list > li {
+  width: auto;
+  padding-right: 0;
+}
+
+.mega-menu .mega-menu__list--condensed {
+  display: grid;
+}
+
+.mega-menu__item {
+  min-width: 0;
 }
 
 .mega-menu__link {
@@ -347,8 +362,9 @@ shopify-account.header__icon:hover {
 .mega-menu__link--level-2 {
   margin-bottom: var(--bg-space-2);
   color: var(--bg-color-teal);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 .mega-menu__link:hover,
@@ -360,6 +376,59 @@ shopify-account.header__icon:hover {
 
 .mega-menu__link--active {
   box-shadow: inset 0 -0.2rem var(--bg-color-pink);
+}
+
+.mega-menu__item--single .mega-menu__link--level-2 {
+  display: flex;
+  min-height: 5.6rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--bg-space-3);
+  margin: 0;
+  padding: var(--bg-space-4) var(--bg-space-5);
+  border: 0.1rem solid var(--bg-color-border);
+  border-radius: var(--bg-radius-medium);
+  background: var(--bg-color-white);
+  box-shadow: var(--bg-shadow-subtle);
+}
+
+.mega-menu__item--single .mega-menu__link--level-2::after {
+  flex: 0 0 auto;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-top: 0.15rem solid currentcolor;
+  border-right: 0.15rem solid currentcolor;
+  color: var(--bg-color-pink);
+  content: "";
+  transform: rotate(45deg);
+  transition: transform var(--bg-transition-fast) var(--bg-ease-standard);
+}
+
+.mega-menu__item--single .mega-menu__link--level-2:hover,
+.mega-menu__item--single .mega-menu__link--level-2:focus-visible {
+  border-color: rgba(244, 79, 134, 0.45);
+  background: rgba(189, 228, 216, 0.35);
+  box-shadow: 0 0.5rem 1.8rem rgba(20, 63, 67, 0.1);
+  transform: translateY(-0.1rem);
+}
+
+.mega-menu__item--single .mega-menu__link--level-2:hover::after,
+.mega-menu__item--single .mega-menu__link--level-2:focus-visible::after {
+  transform: translateX(0.3rem) rotate(45deg);
+}
+
+.mega-menu__item--nested {
+  padding-top: var(--bg-space-4);
+  border-top: 0.2rem solid var(--bg-color-mint);
+}
+
+.mega-menu__item--nested .mega-menu__link--level-2 {
+  padding-top: 0;
+}
+
+.mega-menu__item--nested .list-unstyled {
+  display: grid;
+  gap: var(--bg-space-1);
 }
 
 .mega-menu__promo {
@@ -614,8 +683,9 @@ menu-drawer > details[open] > summary::before {
     max-width: 22rem;
   }
 
-  .mega-menu__list {
-    grid-template-columns: repeat(4, minmax(10rem, 1fr));
+  .mega-menu .mega-menu__list,
+  .header--top-center .mega-menu .mega-menu__list {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
   }
 }
 
@@ -644,18 +714,15 @@ menu-drawer > details[open] > summary::before {
     right: 0;
   }
 
-  .mega-menu__list {
-    grid-template-columns: repeat(5, minmax(10rem, 1fr));
+  .mega-menu__content--with-promo .mega-menu__list,
+  .header--top-center .mega-menu__content--with-promo .mega-menu__list {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
   }
 }
 
 @media screen and (min-width: 1440px) {
   .header__inline-menu .list-menu--inline {
     gap: var(--bg-space-2);
-  }
-
-  .mega-menu__list {
-    grid-template-columns: repeat(6, minmax(10rem, 1fr));
   }
 }
 
@@ -670,5 +737,10 @@ menu-drawer > details[open] > summary::before {
 
   .mega-menu__link:hover {
     transform: none;
+  }
+
+  .mega-menu__item--single .mega-menu__link--level-2:hover::after,
+  .mega-menu__item--single .mega-menu__link--level-2:focus-visible::after {
+    transform: rotate(45deg);
   }
 }
