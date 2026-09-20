@@ -1,4 +1,4 @@
-<section class="bg-hero bg-home-section" aria-labelledby="HeroHeading-{{ section.id }}">
+<section class="bg-hero bg-home-section bg-art-section bg-art--hero" aria-labelledby="HeroHeading-{{ section.id }}">
   <div class="bg-hero__grid bg-home__inner">
     <div class="bg-hero__copy">
       {% if section.settings.eyebrow != blank %}<p class="bg-eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}
@@ -15,7 +15,6 @@
       {% else %}<div class="bg-placeholder">{{ 'lifestyle-1' | placeholder_svg_tag }}</div>{% endif %}
     </div>
   </div>
-  <span class="bg-doodle bg-doodle--one" aria-hidden="true">☆</span><span class="bg-doodle bg-doodle--two" aria-hidden="true">♡</span>
 </section>
 {% schema %}
 {"name":"BabyGroove hero","tag":"section","class":"section","settings":[{"type":"image_picker","id":"image","label":"Desktop image"},{"type":"image_picker","id":"mobile_image","label":"Mobile image"},{"type":"text","id":"eyebrow","label":"Eyebrow","default":"Happy Little Humans"},{"type":"textarea","id":"heading","label":"Heading","default":"Little Moments.\nBig Tomorrows."},{"type":"richtext","id":"text","label":"Text","default":"<p>Thoughtfully chosen essentials for all the beautiful little moments in between.</p>"},{"type":"text","id":"button_label","label":"Primary button","default":"Shop new arrivals"},{"type":"url","id":"button_link","label":"Primary link"},{"type":"text","id":"button_label_2","label":"Secondary button","default":"Explore BabyGroove"},{"type":"url","id":"button_link_2","label":"Secondary link"}],"presets":[{"name":"BabyGroove hero"}]}

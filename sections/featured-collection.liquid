@@ -65,7 +65,7 @@
 -%}
 
 <div
-  class="color-{{ section.settings.color_scheme }} isolate gradient"
+  class="color-{{ section.settings.color_scheme }} isolate gradient{% if section.settings.babygroove_art != 'none' %} bg-art-section bg-art--{{ section.settings.babygroove_art }}{% endif %}"
 >
   <div
     class="collection{% if section.settings.quick_add == 'bulk' %} collection-quick-add-bulk{% endif %} section-{{ section.id }}-padding{% if section.settings.full_width %} collection--full-width{% endif %}"
@@ -73,6 +73,7 @@
     data-id="{{ section.id }}"
   >
     <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width{% if show_mobile_slider %} title-wrapper--self-padded-tablet-down{% endif %}{% if show_desktop_slider %} collection__title--desktop-slider{% endif %}">
+      {%- if section.settings.eyebrow != blank -%}<p class="bg-eyebrow bg-merch-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
       {%- if section.settings.title != blank -%}
         <h2 class="title inline-richtext {{ section.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
           {{ section.settings.title }}
@@ -224,6 +225,22 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "select",
+      "id": "babygroove_art",
+      "label": "BabyGroove background",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "featured", "label": "Featured products" },
+        { "value": "new", "label": "New arrivals" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow"
+    },
     {
       "type": "collection",
       "id": "collection",

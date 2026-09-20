@@ -1,4 +1,4 @@
-<section class="bg-home-section bg-home-section--mist" aria-labelledby="CategoryHeading-{{ section.id }}">
+<section class="bg-home-section bg-art-section bg-art--categories" aria-labelledby="CategoryHeading-{{ section.id }}">
   <div class="bg-home__inner">
     <header class="bg-section-head">{% if section.settings.eyebrow != blank %}<p class="bg-eyebrow">{{ section.settings.eyebrow | escape }}</p>{% endif %}<h2 id="CategoryHeading-{{ section.id }}" class="bg-section-title">{{ section.settings.heading | escape }}</h2>{% if section.settings.text != blank %}<div class="bg-section-copy rte">{{ section.settings.text }}</div>{% endif %}</header>
     <div class="bg-category-grid">

@@ -1,0 +1,57 @@
+{%- liquid
+  assign configured_testimonials = 0
+  for block in section.blocks
+    if block.settings.quote != blank and block.settings.name != blank
+      assign configured_testimonials = configured_testimonials | plus: 1
+    endif
+  endfor
+-%}
+{%- if configured_testimonials > 0 -%}
+  <section class="bg-home-section bg-home-section--mist bg-testimonials" aria-labelledby="TestimonialsHeading-{{ section.id }}">
+    <div class="bg-home__inner">
+      <header class="bg-section-head">
+        {%- if section.settings.eyebrow != blank -%}<p class="bg-eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+        <h2 id="TestimonialsHeading-{{ section.id }}" class="bg-section-title">{{ section.settings.heading | escape }}</h2>
+      </header>
+      <div class="bg-testimonials__track" role="list" aria-label="{{ section.settings.heading | escape }}">
+        {%- for block in section.blocks -%}
+          {%- if block.settings.quote != blank and block.settings.name != blank -%}
+            <figure class="bg-testimonial" role="listitem" {{ block.shopify_attributes }}>
+              <blockquote>{{ block.settings.quote }}</blockquote>
+              <figcaption>
+                {%- if block.settings.image != blank -%}{{ block.settings.image | image_url: width: 120 | image_tag: loading: 'lazy', widths: '60,90,120', sizes: '56px' }}{%- endif -%}
+                <span><strong>{{ block.settings.name | escape }}</strong>{% if block.settings.context != blank %}<small>{{ block.settings.context | escape }}</small>{% endif %}</span>
+              </figcaption>
+            </figure>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Parent testimonials",
+  "tag": "section",
+  "class": "section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Real families. Real love." },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "What parents are saying" }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        { "type": "richtext", "id": "quote", "label": "Genuine testimonial" },
+        { "type": "text", "id": "name", "label": "Customer name" },
+        { "type": "text", "id": "context", "label": "Optional context" },
+        { "type": "image_picker", "id": "image", "label": "Optional customer image" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Parent testimonials" }]
+}
+{% endschema %}
