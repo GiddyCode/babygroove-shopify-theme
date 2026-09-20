@@ -235,3 +235,76 @@
   .bg-art--newsletter .bg-newsletter-form .field__input{min-height:5.2rem}
   .bg-art--newsletter .newsletter-form__button{width:100%;min-width:0;min-height:5.2rem;margin-top:.4rem}
 }
+
+/* Giraffe newsletter artwork and purpose-built email control */
+.bg-art--newsletter{
+  --bg-art:url("11-footer-background.png");
+  justify-content:center;
+  background-position:center;
+}
+.bg-art--newsletter .bg-newsletter__content{
+  width:min(62%,82rem);
+  margin-inline:auto;
+}
+.bg-art--newsletter .bg-newsletter-form{
+  width:min(100%,68rem);
+}
+.bg-newsletter-control{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:center;
+  min-height:6.6rem;
+  padding:.55rem;
+  border:1px solid rgba(20,63,67,.16);
+  border-radius:999rem;
+  background:#fff;
+  box-shadow:0 .8rem 2.4rem rgba(20,63,67,.09);
+}
+.bg-newsletter-control__input{
+  width:100%;
+  min-width:0;
+  height:5.4rem;
+  padding:0 2.4rem;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:var(--bg-color-teal);
+  font:inherit;
+  font-size:1.55rem;
+}
+.bg-newsletter-control__input::placeholder{color:#829496;opacity:1}
+.bg-newsletter-control:focus-within{
+  border-color:var(--bg-color-focus);
+  box-shadow:0 0 0 .3rem rgba(11,111,120,.16),0 .8rem 2.4rem rgba(20,63,67,.09);
+}
+.bg-newsletter-control__button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.2rem;
+  min-width:19rem;
+  min-height:5.4rem;
+  padding:1.2rem 2.8rem;
+  border:0;
+  border-radius:999rem;
+  background:var(--bg-color-pink);
+  box-shadow:0 .6rem 1.6rem rgba(244,79,134,.2);
+  color:#fff;
+  cursor:pointer;
+  font:inherit;
+  font-size:1.55rem;
+  font-weight:800;
+  transition:transform .2s ease,background-color .2s ease,box-shadow .2s ease;
+}
+.bg-newsletter-control__button:hover{background:#ec3d76;box-shadow:0 .9rem 2rem rgba(244,79,134,.26);transform:translateY(-1px)}
+.bg-newsletter-control__button:focus-visible{outline:.2rem solid var(--bg-color-focus);outline-offset:.3rem}
+
+@media(max-width:899px){
+  .bg-art--newsletter{background-position:center}
+  .bg-art--newsletter .bg-newsletter__content{width:min(100%,66rem)}
+}
+@media(max-width:520px){
+  .bg-newsletter-control{grid-template-columns:1fr;gap:.6rem;padding:.7rem;border-radius:2.2rem}
+  .bg-newsletter-control__input{height:5.2rem;padding-inline:1.6rem;text-align:left}
+  .bg-newsletter-control__button{width:100%;min-width:0;min-height:5.2rem}
+}
