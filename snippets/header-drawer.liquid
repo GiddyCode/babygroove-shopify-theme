@@ -24,6 +24,25 @@
       <div class="menu-drawer__inner-container">
         <div class="menu-drawer__navigation-container">
           <nav class="menu-drawer__navigation">
+            <form action="{{ routes.search_url }}" method="get" role="search" class="menu-drawer__search">
+              <label class="visually-hidden" for="MenuDrawer-Search">{{ 'general.search.search' | t }}</label>
+              <input
+                id="MenuDrawer-Search"
+                class="menu-drawer__search-input"
+                type="search"
+                name="q"
+                value="{{ search.terms | escape }}"
+                placeholder="{{ 'general.search.search' | t }}"
+                autocorrect="off"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+              >
+              <input type="hidden" name="options[prefix]" value="last">
+              <button class="menu-drawer__search-button" type="submit" aria-label="{{ 'general.search.search' | t }}">
+                <span class="svg-wrapper">{{ 'icon-search.svg' | inline_asset_content }}</span>
+              </button>
+            </form>
             <ul class="menu-drawer__menu has-submenu list-menu" role="list">
               {%- for link in section.settings.menu.links -%}
                 <li>
