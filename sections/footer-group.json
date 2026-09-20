@@ -17,7 +17,7 @@
         "brand": {"type":"brand_information","settings":{"show_social":true}},
         "shop": {"type":"link_list","settings":{"heading":"Shop","menu":"main-menu"}},
         "help": {"type":"link_list","settings":{"heading":"Help"}},
-        "about": {"type":"text","settings":{"heading":"A brighter tomorrow together","subtext":"<p>Use this space for a short, factual BabyGroove brand statement.</p>"}}
+        "about": {"type":"text","settings":{"heading":"A brighter tomorrow together","subtext":"<p>Thoughtful essentials for growing, playing, learning and all the little moments in between.</p>"}}
       },
       "block_order": ["brand","shop","help","about"],
       "settings": {
