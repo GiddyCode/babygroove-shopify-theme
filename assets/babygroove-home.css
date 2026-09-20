@@ -108,3 +108,27 @@
   .bg-art--editorial .bg-editorial__content,.bg-art--bundle .bg-promotion__content,.bg-art--newsletter .bg-newsletter__content{padding:2.6rem 2rem;border-radius:2.4rem}
   .bg-newsletter-form .field{display:flex;flex-direction:column;height:auto;border-radius:2rem}.bg-newsletter-form .newsletter-form__button{position:relative;width:100%;margin-top:.4rem}
 }
+
+/* Hero typography and CTA polish */
+.bg-art--hero .bg-hero__copy{width:43%;max-width:59rem;margin-left:clamp(3rem,8vw,12rem);padding-block:8rem}
+.bg-art--hero .bg-eyebrow{margin-bottom:1.6rem;font-size:1.2rem;letter-spacing:.26em}
+.bg-art--hero .bg-hero__title{max-width:59rem;font-family:"Arial Rounded MT Bold","Avenir Next Rounded",var(--font-heading-family);font-size:clamp(5rem,4.7vw,6.8rem);font-weight:700;letter-spacing:-.045em;line-height:1.01;text-wrap:balance}
+.bg-art--hero .bg-hero__text{max-width:49rem;margin-top:2.2rem;color:#486b6e;font-size:clamp(1.65rem,1.25vw,1.9rem);line-height:1.55}
+.bg-art--hero .bg-hero__text p{margin-block:0}
+.bg-button-row{align-items:center;gap:1.4rem;margin-top:3rem}
+.bg-cta{gap:.9rem;min-width:20rem;min-height:5.6rem;padding:1.35rem 3rem;border-width:1.5px;box-shadow:0 .8rem 2rem rgba(244,79,134,.2);font-size:1.55rem;font-weight:800;letter-spacing:.01em;line-height:1.15}
+.bg-cta:hover{background:#ec3d76;box-shadow:0 1.2rem 2.8rem rgba(244,79,134,.25)}
+.bg-cta--secondary{border-color:rgba(20,63,67,.72);background:rgba(255,250,246,.8);box-shadow:none;backdrop-filter:blur(4px)}
+.bg-cta--secondary:hover{background:#fff;box-shadow:0 .8rem 2rem rgba(20,63,67,.1)}
+.bg-art--hero .bg-button-row{margin-top:3.2rem}
+
+@media(max-width:899px){
+  .bg-art--hero .bg-hero__copy{width:58%;margin-left:clamp(2rem,5vw,5rem);padding-block:6rem}
+}
+@media(max-width:520px){
+  .bg-art--hero .bg-hero__copy{width:100%;margin-left:0;padding-top:6.5rem;padding-bottom:30rem}
+  .bg-art--hero .bg-hero__title{max-width:42rem;font-size:clamp(4.1rem,12vw,5rem)}
+  .bg-art--hero .bg-hero__text{max-width:38rem;font-size:1.65rem}
+  .bg-art--hero .bg-button-row{gap:1rem}
+  .bg-art--hero .bg-cta{min-width:0;min-height:5.4rem}
+}
