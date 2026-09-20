@@ -1,0 +1,202 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "<em>Everyday essential for little moments</em>",
+            "heading_size": "h1"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Shop Baby Essentials",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": true,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_10_18_13_AM.png",
+        "image_overlay_opacity": 20,
+        "image_height": "adapt",
+        "image_behavior": "none",
+        "desktop_content_position": "middle-right",
+        "desktop_content_alignment": "center",
+        "show_text_box": false,
+        "color_scheme": "scheme-3",
+        "stack_images_on_mobile": false,
+        "mobile_content_alignment": "right",
+        "show_text_below": false
+      }
+    },
+    "rich_text_JXKV9d": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_DwTkjU": {
+          "type": "heading",
+          "settings": {
+            "heading": "Welcome to BabyGroove",
+            "heading_size": "h1"
+          }
+        },
+        "text_bfr96z": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At BabyGroove, we offer everyday baby essentials, accessories, and thoughtful gift items designed to make little moments easier and more special.</p>"
+          }
+        },
+        "button_F6yCyN": {
+          "type": "button",
+          "settings": {
+            "button_label": "Shop Now",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_DwTkjU",
+        "text_bfr96z",
+        "button_F6yCyN"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-5",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 32
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "all",
+        "products_to_show": 8,
+        "title": "Featured products",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "columns_desktop": 4,
+        "enable_desktop_slider": false,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "color_scheme": "scheme-1",
+        "image_ratio": "adapt",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 44,
+        "padding_bottom": 36
+      }
+    },
+    "multicolumn_hFjzjF": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_NHYYxk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_11_03_09_AM_1.png",
+            "title": "Thoughtfully Selected",
+            "text": "<p><em>We carefully choose baby items that are practical, stylish, and parent-friendly.</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_WrJ8BW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_11_03_09_AM_2.png",
+            "title": "Secure Checkout",
+            "text": "<p><em>Shop confidently with a smooth and secure checkout experience.</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_dhgfaW": {
+          "type": "column",
+          "settings": {
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_7_2026_11_03_09_AM_3.png",
+            "title": "Made for Everyday Moments",
+            "text": "<p><em>From baby essentials to gift ideas, BabyGroove is here for growing families.</em></p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_NHYYxk",
+        "column_WrJ8BW",
+        "column_dhgfaW"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "title": "Why Parents Choose BabyGroove",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "button_label": "",
+        "button_link": "",
+        "columns_desktop": 3,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "slideshow_wjy3P4": {
+      "type": "slideshow",
+      "name": "t:sections.slideshow.presets.name",
+      "settings": {
+        "layout": "full_bleed",
+        "slide_height": "small",
+        "slider_visual": "counter",
+        "auto_rotate": false,
+        "change_slides_speed": 5,
+        "image_behavior": "none",
+        "show_text_below": true,
+        "accessibility_info": "Slideshow about our brand"
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "rich_text_JXKV9d",
+    "featured_collection",
+    "multicolumn_hFjzjF",
+    "slideshow_wjy3P4"
+  ]
+}
