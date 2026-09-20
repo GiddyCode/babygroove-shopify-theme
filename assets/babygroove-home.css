@@ -132,3 +132,106 @@
   .bg-art--hero .bg-button-row{gap:1rem}
   .bg-art--hero .bg-cta{min-width:0;min-height:5.4rem}
 }
+
+/* Standard newsletter banner replacing the former social placeholder */
+.bg-art--newsletter{
+  min-height:clamp(42rem,32vw,54rem);
+  justify-content:flex-end;
+  padding:4rem max(var(--bg-page-gutter),calc((100vw - 144rem)/2 + 4.8rem));
+  background-position:center;
+  background-size:cover;
+}
+.bg-art--newsletter .bg-newsletter__content{
+  align-items:center;
+  width:min(55%,76rem);
+  padding:3rem 2rem;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  text-align:center;
+  backdrop-filter:none;
+}
+.bg-art--newsletter .bg-eyebrow{
+  margin-bottom:1.2rem;
+  font-size:1.25rem;
+  letter-spacing:.22em;
+}
+.bg-art--newsletter .bg-newsletter__content h2{
+  max-width:70rem;
+  font-family:"Arial Rounded MT Bold","Avenir Next Rounded",var(--font-heading-family);
+  font-size:clamp(3.8rem,4vw,5.8rem);
+  font-weight:700;
+  letter-spacing:-.04em;
+  line-height:1.05;
+}
+.bg-art--newsletter .bg-newsletter__content>.rte{
+  max-width:62rem;
+  margin-top:1.4rem;
+  color:#486b6e;
+  font-size:clamp(1.6rem,1.4vw,1.9rem);
+  line-height:1.5;
+}
+.bg-art--newsletter .bg-newsletter__content>.rte p{margin-block:0}
+.bg-art--newsletter .bg-newsletter-form{
+  width:min(100%,66rem);
+  max-width:none;
+  margin-top:2.6rem;
+}
+.bg-art--newsletter .newsletter-form__field-wrapper{max-width:none}
+.bg-art--newsletter .bg-newsletter-form .field{
+  min-height:6.4rem;
+  padding:.5rem;
+  border:1px solid rgba(20,63,67,.14);
+  border-radius:999rem;
+  background:rgba(255,255,255,.94);
+  box-shadow:0 .6rem 2rem rgba(20,63,67,.08);
+}
+.bg-art--newsletter .bg-newsletter-form .field:before,
+.bg-art--newsletter .bg-newsletter-form .field:after{display:none}
+.bg-art--newsletter .newsletter-form__button{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:1.2rem;
+  width:auto;
+  min-width:20rem;
+  min-height:5.4rem;
+  padding-inline:3rem;
+  border-radius:999rem;
+  background:var(--bg-color-pink);
+  color:#fff;
+  font-size:1.55rem;
+  font-weight:800;
+}
+.bg-art--newsletter .bg-newsletter__content>small{
+  margin-top:1.3rem;
+  color:var(--bg-color-teal);
+  font-size:1.25rem;
+}
+
+@media(max-width:899px){
+  .bg-art--newsletter{
+    min-height:64rem;
+    align-items:flex-end;
+    padding:3rem 2.4rem;
+    background-position:32% center;
+  }
+  .bg-art--newsletter .bg-newsletter__content{
+    width:min(100%,64rem);
+    margin-inline:auto;
+    padding:3rem;
+    border-radius:2.8rem;
+    background:rgba(255,250,246,.93);
+    box-shadow:var(--bg-shadow-subtle);
+    backdrop-filter:blur(4px);
+  }
+}
+@media(max-width:520px){
+  .bg-art--newsletter{min-height:68rem;padding:2rem 1.6rem;background-position:26% center}
+  .bg-art--newsletter .bg-newsletter__content{padding:2.8rem 2rem}
+  .bg-art--newsletter .bg-newsletter__content h2{font-size:3.8rem}
+  .bg-art--newsletter .bg-newsletter-form .field{display:flex;min-height:0;padding:.6rem;border-radius:2.2rem}
+  .bg-art--newsletter .bg-newsletter-form .field__input{min-height:5.2rem}
+  .bg-art--newsletter .newsletter-form__button{width:100%;min-width:0;min-height:5.2rem;margin-top:.4rem}
+}
