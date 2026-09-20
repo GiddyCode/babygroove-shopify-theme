@@ -386,3 +386,63 @@
   .bg-art--trust .bg-value h3{font-size:1.8rem}
   .bg-art--trust .bg-value .rte{font-size:1.4rem}
 }
+
+/* Category discovery: chips plus four editorial cards */
+.bg-category-discovery{padding-block:clamp(7rem,7vw,10rem);background-image:linear-gradient(rgba(255,250,246,.8),rgba(255,250,246,.88)),var(--bg-art);background-position:center;background-size:cover}
+.bg-category-discovery .bg-home__inner{width:min(100% - 6rem,156rem)}
+.bg-category-discovery__head{max-width:92rem;margin-bottom:3.6rem}
+.bg-category-discovery__head .bg-eyebrow{margin-bottom:1.2rem;font-size:1.25rem;letter-spacing:.2em}
+.bg-category-discovery__head .bg-section-title{font-family:"Arial Rounded MT Bold","Avenir Next Rounded",var(--font-heading-family);font-size:clamp(4rem,4.2vw,5.8rem);font-weight:700;letter-spacing:-.04em;line-height:1.06;text-wrap:balance}
+.bg-category-discovery__head .bg-section-copy{margin-top:1.2rem;color:#486b6e;font-size:clamp(1.6rem,1.35vw,1.9rem)}
+.bg-category-discovery .bg-category-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:clamp(1.4rem,2.2vw,3.2rem);overflow:visible;margin:0;padding:0}
+.bg-category-discovery .bg-category{display:flex;flex-direction:column;align-items:center;min-width:0;color:var(--bg-color-teal);text-align:center;text-decoration:none;scroll-snap-align:none;transition:transform .22s ease,color .22s ease}
+.bg-category-discovery .bg-category__media{display:block;width:min(100%,13.6rem);aspect-ratio:1;overflow:hidden;border-radius:50%;background:transparent;box-shadow:none;transition:transform .22s ease,box-shadow .22s ease}
+.bg-category-discovery .bg-category__media img{display:block;width:100%;height:100%;border-radius:50%;object-fit:contain;transform:none;transition:transform .22s ease}
+.bg-category-discovery .bg-category__title{margin-top:1.2rem;font-size:clamp(1.45rem,1.2vw,1.75rem);font-weight:750;line-height:1.3;transition:color .22s ease}
+.bg-category-discovery .bg-category:hover{color:var(--bg-color-pink);transform:translateY(-.35rem)}
+.bg-category-discovery .bg-category:hover .bg-category__media{box-shadow:0 1rem 2.4rem rgba(20,63,67,.1)}
+.bg-category-discovery .bg-category:hover .bg-category__media img{transform:scale(1.025)}
+.bg-category-discovery .bg-category:focus-visible{border-radius:1.6rem;outline:.2rem solid var(--bg-color-focus);outline-offset:.5rem;box-shadow:none}
+.bg-category-promos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(1.4rem,1.8vw,2.4rem);margin-top:clamp(4.5rem,5vw,7rem)}
+.bg-category-promo{position:relative;isolation:isolate;min-height:30rem;overflow:hidden;border:1px solid rgba(20,63,67,.08);border-radius:2.4rem;background:#fff;box-shadow:0 .5rem 2rem rgba(20,63,67,.06);transition:transform .24s ease,box-shadow .24s ease}
+.bg-category-promo__media{position:absolute;z-index:-1;inset:0;overflow:hidden}
+.bg-category-promo__media img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .35s ease}
+.bg-category-promo__content{position:absolute;top:50%;left:clamp(1.8rem,2vw,3rem);width:47%;max-width:19rem;transform:translateY(-50%)}
+.bg-category-promo__content h3{margin:0;font-family:"Arial Rounded MT Bold","Avenir Next Rounded",var(--font-heading-family);font-size:clamp(2.2rem,1.9vw,3rem);font-weight:700;letter-spacing:-.035em;line-height:1.08}
+.bg-category-promo__content h3 span{display:block}
+.bg-category-promo__content .rte{margin-top:1.3rem;color:#486b6e;font-size:clamp(1.35rem,1.05vw,1.55rem);line-height:1.45}
+.bg-category-promo__content .rte p{margin-block:0}
+.bg-category-promo__cta{display:inline-flex;align-items:center;justify-content:center;gap:.7rem;min-height:4.3rem;margin-top:1.8rem;padding:.9rem 1.6rem;border-radius:999rem;background:#ffdce7;color:#b92358;font-size:1.3rem;font-weight:800;line-height:1.15;text-decoration:none;transition:background-color .2s ease,transform .2s ease}
+.bg-category-promo--mint .bg-category-promo__cta{background:#359b83;color:#fff}
+.bg-category-promo__cta:hover{background:var(--bg-color-pink);color:#fff;transform:translateY(-1px)}
+.bg-category-promo:hover{transform:translateY(-.4rem);box-shadow:0 1.4rem 3rem rgba(20,63,67,.11)}
+.bg-category-promo:hover .bg-category-promo__media img{transform:scale(1.025)}
+.bg-category-promo__cta:focus-visible{outline:.2rem solid var(--bg-color-focus);outline-offset:.3rem;box-shadow:none}
+
+@media(max-width:1199px){
+  .bg-category-discovery .bg-category-grid{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:2.8rem}
+  .bg-category-promos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .bg-category-promo{min-height:32rem}
+  .bg-category-promo__content{max-width:22rem}
+}
+@media(max-width:749px){
+  .bg-category-discovery{padding-block:6.4rem;background-size:auto 100%}
+  .bg-category-discovery .bg-home__inner{width:min(100% - 3.2rem,156rem)}
+  .bg-category-discovery__head{margin-bottom:3.2rem}
+  .bg-category-discovery__head .bg-section-title{font-size:4rem}
+  .bg-category-discovery .bg-category-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.4rem 1rem;overflow:visible;margin:0;padding:0}
+  .bg-category-discovery .bg-category{flex:initial}
+  .bg-category-discovery .bg-category__media{width:100%}
+  .bg-category-discovery .bg-category__title{font-size:1.35rem}
+  .bg-category-promos{grid-template-columns:1fr;gap:1.6rem;margin-top:4.5rem}
+  .bg-category-promo{min-height:31rem}
+  .bg-category-promo__content{left:2.4rem;width:46%;max-width:19rem}
+  .bg-category-promo__content h3{font-size:2.6rem}
+}
+@media(max-width:420px){
+  .bg-category-discovery .bg-category-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:2.4rem 1.8rem}
+  .bg-category-discovery .bg-category__media{width:min(100%,14rem)}
+}
+@media(prefers-reduced-motion:reduce){
+  .bg-category-discovery .bg-category,.bg-category-discovery .bg-category__media,.bg-category-discovery .bg-category__media img,.bg-category-promo,.bg-category-promo__media img,.bg-category-promo__cta{transition:none}
+}
