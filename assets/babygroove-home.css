@@ -311,3 +311,42 @@
   .bg-newsletter-control__input{height:5.2rem;padding-inline:1.6rem;text-align:left}
   .bg-newsletter-control__button{width:100%;min-width:0;min-height:5.2rem}
 }
+
+/* New Arrivals merchandising UX */
+.bg-art--new .collection{max-width:154rem;margin-inline:auto}
+.bg-art--new .collection__title{margin-bottom:clamp(3rem,4vw,5rem)}
+.bg-art--new .collection__title .title{margin-bottom:1.2rem;font-family:"Arial Rounded MT Bold","Avenir Next Rounded",var(--font-heading-family);font-size:clamp(4.2rem,4.8vw,6.2rem);font-weight:700;letter-spacing:-.04em;line-height:1.05}
+.bg-art--new .collection__description{max-width:72rem;margin:0 auto;color:#486b6e;font-size:clamp(1.6rem,1.4vw,1.9rem);line-height:1.5}
+.bg-art--new slider-component{position:relative;display:block}
+.bg-art--new .product-grid{margin-top:0;column-gap:1.6rem;row-gap:2.4rem}
+.bg-art--new .grid__item{display:flex}
+.bg-art--new .card-wrapper{width:100%}
+.bg-art--new .card-wrapper .card{padding:1.1rem;border:1px solid rgba(20,63,67,.1);border-radius:2.2rem;box-shadow:0 .5rem 1.8rem rgba(20,63,67,.07)}
+.bg-art--new .card .card__inner,.bg-art--new .card .media{border-radius:1.6rem}
+.bg-art--new .card__content{padding:.5rem .4rem .7rem}
+.bg-art--new .card__information{padding:1.4rem .4rem .5rem}
+.bg-art--new .card__heading{font-size:1.65rem;line-height:1.35}
+.bg-art--new .card-information>.price{margin-top:.6rem;font-size:1.75rem}
+.bg-art--new .card-wrapper:hover .card{transform:translateY(-.5rem);box-shadow:0 1.4rem 3.2rem rgba(20,63,67,.12)}
+.bg-art--new .slider-buttons{position:absolute;z-index:3;top:50%;right:-3.2rem;left:-3.2rem;display:flex;justify-content:space-between;pointer-events:none;transform:translateY(-50%)}
+.bg-art--new .slider-counter{display:none}
+.bg-art--new .slider-button{width:5.2rem;height:5.2rem;border:1px solid rgba(20,63,67,.08);border-radius:50%;background:#fff;box-shadow:0 .8rem 2.4rem rgba(20,63,67,.12);color:var(--bg-color-teal);pointer-events:auto;transition:transform .2s ease,box-shadow .2s ease}
+.bg-art--new .slider-button:hover{transform:scale(1.05);box-shadow:0 1.1rem 2.8rem rgba(20,63,67,.16)}
+.bg-art--new .slider-button .svg-wrapper{width:1.8rem;height:1.8rem}
+.bg-art--new .collection__view-all{margin-top:clamp(3rem,4vw,5rem)}
+.bg-art--new .collection__view-all .button{min-width:26rem;min-height:5.6rem;border-radius:999rem;background:var(--bg-color-pink);box-shadow:0 .8rem 2rem rgba(244,79,134,.2);color:#fff;font-size:1.55rem;font-weight:800}
+.bg-art--new .collection__view-all .button:after{border-radius:999rem;box-shadow:none}
+.bg-art--new .collection__view-all .button:hover{background:#ec3d76;box-shadow:0 1.2rem 2.8rem rgba(244,79,134,.25);transform:translateY(-2px)}
+
+@media(max-width:1599px){
+  .bg-art--new .slider-buttons{right:.8rem;left:.8rem}
+}
+@media(max-width:989px){
+  .bg-art--new .slider-buttons{display:none}
+  .bg-art--new .product-grid.slider{scroll-padding-left:var(--bg-page-gutter)}
+  .bg-art--new .grid--peek.slider .grid__item{width:min(72vw,31rem);max-width:31rem}
+}
+@media(max-width:520px){
+  .bg-art--new .collection__title .title{font-size:4.2rem}
+  .bg-art--new .collection__view-all .button{width:100%;min-width:0}
+}
