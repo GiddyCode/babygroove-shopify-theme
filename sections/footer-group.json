@@ -13,10 +13,17 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "brand": {"type":"brand_information","settings":{"show_social":true}},
+        "shop": {"type":"link_list","settings":{"heading":"Shop","menu":"main-menu"}},
+        "help": {"type":"link_list","settings":{"heading":"Help"}},
+        "about": {"type":"text","settings":{"heading":"A brighter tomorrow together","subtext":"<p>Use this space for a short, factual BabyGroove brand statement.</p>"}}
+      },
+      "block_order": ["brand","shop","help","about"],
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "Join the BabyGroove family",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,

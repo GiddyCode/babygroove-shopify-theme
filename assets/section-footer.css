@@ -1,6 +1,20 @@
 .footer {
-  border-top: 0.1rem solid rgba(var(--color-foreground), 0.08);
+  border-top: 0;
+  background: linear-gradient(145deg, #fffaf6, #fff 55%, #edf9f6);
+  color: var(--bg-color-teal);
 }
+
+.footer__content-top { padding-top: clamp(4rem, 7vw, 8rem); }
+.footer__blocks-wrapper { gap: 3rem; }
+.footer-block__heading { color: var(--bg-color-teal); font-weight: 800; }
+.footer .list-menu__item--link { color: var(--bg-color-text-muted); padding-block: .6rem; }
+.footer .list-menu__item--link:hover { color: var(--bg-color-pink); text-decoration: none; }
+.footer-block--newsletter { padding: 3rem; border-radius: 2.4rem; background: #fff0f4; }
+.footer .newsletter-form__field-wrapper .field { border-radius: 999rem; background: #fff; }
+.footer .field:before,
+.footer .field:after { border-radius: 999rem; }
+.footer__copyright,
+.footer__copyright a { color: var(--bg-color-text-muted); }
 
 .footer:not(.color-scheme-1) {
   border-top: none;
