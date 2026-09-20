@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
+{{ 'babygroove-header.css' | asset_url | stylesheet_tag }}
+
 <style>
   header-drawer {
     justify-self: start;
@@ -166,19 +168,12 @@
   -%}
   <header class="header header--{{ section.settings.logo_position }} header--mobile-{{ section.settings.mobile_logo_position }} page-width{% if section.settings.menu_type_desktop == 'drawer' %} drawer-menu{% endif %}{% if section.settings.menu != blank %} header--has-menu{% endif %}{% if has_app_block %} header--has-app{% endif %}{% if social_links %} header--has-social{% endif %}{% if shop.customer_accounts_enabled %} header--has-account{% endif %}{% if country_selector or language_selector %} header--has-localizations{% endif %}">
     {%- liquid
-      assign render_search_left = false
-      if section.settings.logo_position == 'top-center' or section.settings.menu == blank or shop.customer_accounts_enabled
-        assign render_search_left = true
-      endif
-
       if section.settings.menu != blank
         render 'header-drawer', show_country_selector: country_selector, show_language_selector: language_selector, show_social_links: social_links
       endif
-
-      if render_search_left
-        render 'header-search', input_id: 'Search-In-Modal-1'
-      endif
     -%}
+
+    {% render 'header-search', input_id: 'Search-In-Modal-Mobile', class: 'header__search--mobile' %}
 
     {%- if section.settings.logo_position != 'middle-center' -%}
       {%- if request.page_type == 'index' -%}
@@ -280,7 +275,21 @@
           </localization-form>
         {%- endif -%}
       </div>
-      {% render 'header-search', input_id: 'Search-In-Modal' %}
+      {% render 'header-search', input_id: 'Search-In-Modal', class: 'header__search--desktop' %}
+
+      {%- if section.settings.wishlist_link != blank -%}
+        <a
+          href="{{ section.settings.wishlist_link }}"
+          class="header__icon header__icon--wishlist link focus-inset"
+          aria-label="{{ section.settings.wishlist_label | escape }}"
+          data-wishlist-entry
+        >
+          <span class="svg-wrapper">{{ 'icon-heart.svg' | inline_asset_content }}</span>
+          <span class="header__action-label">{{ section.settings.wishlist_label | escape }}</span>
+        </a>
+      {%- else -%}
+        <span class="header__wishlist-slot" data-wishlist-entry hidden></span>
+      {%- endif -%}
 
       {%- if shop.customer_accounts_enabled -%}
         <shopify-account
@@ -306,6 +315,7 @@
           <span class="svg-wrapper">{{ 'icon-cart.svg' | inline_asset_content }}</span>
         {% endif %}
         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        <span class="header__action-label" aria-hidden="true">{{ 'templates.cart.cart' | t }}</span>
         {%- if cart != empty -%}
           <div class="cart-count-bubble">
             {%- if cart.item_count < 100 -%}
@@ -619,7 +629,43 @@
     },
     {
       "type": "header",
+      "content": "Mega menu merchandising"
+    },
+    {
+      "type": "image_picker",
+      "id": "mega_menu_image",
+      "label": "Promotional image"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_heading",
+      "label": "Promotional heading"
+    },
+    {
+      "type": "text",
+      "id": "mega_menu_text",
+      "label": "Promotional text"
+    },
+    {
+      "type": "url",
+      "id": "mega_menu_link",
+      "label": "Promotional link"
+    },
+    {
+      "type": "header",
       "content": "t:sections.header.settings.header__utilities.content"
+    },
+    {
+      "type": "url",
+      "id": "wishlist_link",
+      "label": "Wishlist link",
+      "info": "The wishlist icon appears only when a destination is configured."
+    },
+    {
+      "type": "text",
+      "id": "wishlist_label",
+      "label": "Wishlist label",
+      "default": "Wishlist"
     },
     {
       "type": "checkbox",

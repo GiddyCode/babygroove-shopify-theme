@@ -140,6 +140,24 @@
             </ul>
           </nav>
           <div class="menu-drawer__utility-links">
+            <div class="menu-drawer__account-links">
+              {%- if shop.customer_accounts_enabled -%}
+                <a href="{{ routes.account_url }}" class="menu-drawer__account-link link focus-inset">
+                  <span class="svg-wrapper">{{ 'icon-account.svg' | inline_asset_content }}</span>
+                  <span>{{ 'customer.account.title' | t }}</span>
+                </a>
+              {%- endif -%}
+              {%- if section.settings.wishlist_link != blank -%}
+                <a
+                  href="{{ section.settings.wishlist_link }}"
+                  class="menu-drawer__account-link link focus-inset"
+                  data-wishlist-entry
+                >
+                  <span class="svg-wrapper">{{ 'icon-heart.svg' | inline_asset_content }}</span>
+                  <span>{{ section.settings.wishlist_label | escape }}</span>
+                </a>
+              {%- endif -%}
+            </div>
             {%- if show_country_selector or show_language_selector -%}
               <div class="menu-drawer__localization header-localization">
                 {%- if show_country_selector -%}
