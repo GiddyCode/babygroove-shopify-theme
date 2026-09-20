@@ -244,13 +244,16 @@
   background-position:center;
 }
 .bg-art--newsletter .bg-newsletter__content{
+  display:grid;
+  justify-items:center;
+  align-content:center;
   width:min(62%,82rem);
   margin-inline:auto;
 }
 .bg-art--newsletter .bg-newsletter-form{
   width:min(100%,68rem);
   margin:2.6rem auto 0;
-  align-self:center;
+  justify-self:center;
 }
 .bg-newsletter-control{
   display:grid;
